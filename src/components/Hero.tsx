@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
 import heroImage from "@/assets/hero-tech.jpg";
+import { Link } from "react-router-dom";
+import { YouTubeVideoModal } from "./VideoModal";
 
 export const Hero = () => {
   return (
@@ -45,13 +47,17 @@ export const Hero = () => {
             </p>
 
             <div className="flex flex-wrap gap-4">
-              <Button variant="hero" size="lg" className="group">
-                Explore Platform
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button variant="outline" size="lg">
-                View Demo
-              </Button>
+              <Link
+                to="https://trinetraai-demo.bitbrains.site/"
+                target="_blank"
+              >
+                <Button variant="hero" size="lg" className="group">
+                  Try It Now
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
+
+              <YouTubeVideoModal youtubeId="8r2cPWdlgOY" />
             </div>
 
             <div className="flex items-center gap-8 pt-4">
